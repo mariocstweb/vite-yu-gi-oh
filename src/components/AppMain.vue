@@ -1,20 +1,20 @@
 <script>
 import PokemonCard from "./PokemonCard.vue";
+import { store } from "../../src/data/store.js"
 export default {
   name: "AppMain",
-  components: { PokemonCard }
+  data: () => ({ store }),
+  components: { PokemonCard },
 }
-
 </script>
 
 <template>
   <div class="container bg-danger">
-    <div class="row row-cols-5 p-5 d-flex justify-content-between flex-wrap g-5">
-      <!-- COL -->
+    <div v-for="pokemon in store.pokemons" :key="pokemon.id"
+      class="row row-cols-5 p-5 d-flex justify-content-between flex-wrap g-5">
       <div class="col p-2">
-        <PokemonCard />
+        <PokemonCard :pokemonData="pokemon" />
       </div>
-      <!-- COL -->
     </div>
   </div>
 </template>
