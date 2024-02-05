@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-  <div class="card">
+  <div class="card border-radius">
     <img :src="pokemonData.imageUrl" class="img-fluid card-img-top img-container" alt="...">
 
     <div class="card-body text-center">
@@ -31,4 +31,6 @@ export default {
   width: auto;
 
 }
+
+.border-radius {}
 </style>
