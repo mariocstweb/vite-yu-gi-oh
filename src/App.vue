@@ -10,7 +10,7 @@ export default {
   components: { AppHeader, AppMain },
   created() {
     axios.get(endpoint).then(res => {
-      store.pokemons = res.data.results;
+      store.pokemons = res.data.docs;
     })
     console.log(store);
   }

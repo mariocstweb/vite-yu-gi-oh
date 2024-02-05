@@ -9,20 +9,25 @@ export default {
 </script>
 
 <template>
-  <div class="container bg-danger">
-    <div v-for="pokemon in store.pokemons" :key="pokemon.id"
-      class="row row-cols-5 p-5 d-flex justify-content-between flex-wrap g-5">
-      <div class="col p-2">
-        <PokemonCard :pokemonData="pokemon" />
+  <main>
+    <div class="container bg-danger">
+      <div class="row row-cols-5 p-3 d-flex justify-content-between flex-wrap g-5">
+        <div v-for="pokemon in store.pokemons" :key="pokemon.id" class="col p-3">
+          <PokemonCard :pokemonData="pokemon" />
+        </div>
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <style scoped>
 .row {
-  margin-top: 100px;
+
   background-color: #DEDEDE;
   border-radius: 30px;
+}
+
+main {
+  background-color: #B71B1B;
 }
 </style>

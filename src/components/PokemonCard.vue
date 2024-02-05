@@ -1,5 +1,5 @@
 <script>
-import { store } from "../../src/data/store.js"
+import { store } from "../data/store.js"
 export default {
   name: "PokemonCard",
   props: {
@@ -14,15 +14,21 @@ export default {
 
 <template>
   <div class="card">
-    <img :src="pokemonData.imageUrl" class="card-img-top" alt="...">
-    <div class="card-body">
-      <p class="card-text"></p>
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-        content.</p>
+    <img :src="pokemonData.imageUrl" class="img-fluid card-img-top img-container" alt="...">
+
+    <div class="card-body text-center">
+      <p class="card-text">{{ pokemonData.number }}</p>
+      <h5 class="card-title">{{ pokemonData.name }}</h5>
+      <p class="card-text">{{ pokemonData.type1 }}</p>
     </div>
   </div>
 </template>
 
 
-<style scoped></style>
+<style scoped>
+.img-container {
+  height: 200px;
+  width: auto;
+
+}
+</style>
