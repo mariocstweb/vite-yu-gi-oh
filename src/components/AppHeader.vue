@@ -20,7 +20,7 @@ export default {
         <div class="pokedex pk-y me-3"></div>
         <div class="pokedex pk-g me-3 "></div>
       </div>
-      <SelectType></SelectType>
+      <SelectType @change="$emit('filter-by-type', $event.target.value)" />
     </div>
   </header>
 </template>
