@@ -10,9 +10,9 @@ export default {
 
 <template>
   <main>
-    <div class="container bg-danger">
+    <div class="container">
       <div class="row row-cols-5 p-3 d-flex justify-content-between flex-wrap g-5">
-        <div v-for="pokemon in store.pokemons" :key="pokemon.id" class="col p-3">
+        <div v-for="pokemon in store.pokemons" :key="pokemon._id" class="col p-3">
           <PokemonCard :pokemonData="pokemon" />
         </div>
       </div>

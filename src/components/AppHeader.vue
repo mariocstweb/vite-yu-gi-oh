@@ -1,7 +1,10 @@
 <script>
+import SelectType from "./SelectType.vue"
 export default {
   name: "AppHeader",
+  components: { SelectType },
 }
+
 </script>
 
 <template>
@@ -10,11 +13,14 @@ export default {
       <img src="../../public/IMG_5941.png" alt="" class="mt-2">
     </div>
 
-    <div class="container d-flex align-items-start h-100 pt-5 ps-0">
-      <div class="pokedex-big me-2"></div>
-      <div class="pokedex pk-red me-2"></div>
-      <div class="pokedex pk-y me-3"></div>
-      <div class="pokedex pk-g me-3 "></div>
+    <div class="container d-flex justify-content-between align-items-start h-100 pt-5 ps-0">
+      <div class="d-flex">
+        <div class="pokedex-big me-2"></div>
+        <div class="pokedex pk-red me-2"></div>
+        <div class="pokedex pk-y me-3"></div>
+        <div class="pokedex pk-g me-3 "></div>
+      </div>
+      <SelectType></SelectType>
     </div>
   </header>
 </template>
